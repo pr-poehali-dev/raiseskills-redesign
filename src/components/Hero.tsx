@@ -1,54 +1,71 @@
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import Icon from '@/components/ui/icon';
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-12 px-4">
-      <div className="container mx-auto max-w-5xl">
-        <div className="bg-gradient-to-r from-primary via-purple-600 to-purple-500 rounded-3xl p-12 relative overflow-hidden shadow-2xl">
-          <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-white">
-              <Badge className="mb-4 bg-white/20 border-0 text-white">
-                ДЛЯ БИЗНЕСА
-              </Badge>
-              <h1 className="font-heading font-bold text-4xl md:text-5xl mb-6 leading-tight">
-                SEO ПРОДВИЖЕНИЕ<br />ДЛЯ ВАШЕГО БИЗНЕСА
-              </h1>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-primary text-xs font-bold">+</span>
-                  </div>
-                  <p className="text-white/95">Научим вашего ребенка программированию с нуля</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-primary text-xs font-bold">+</span>
-                  </div>
-                  <p className="text-white/95">Каждое занятие проходит в группах с опытным педагогом</p>
-                </div>
-              </div>
+    <section className="bg-white py-20 px-4">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              SEO продвижение сайтов
+            </div>
+            <h1 className="font-heading font-bold text-5xl md:text-6xl mb-6 leading-tight">
+              Выведем ваш сайт в ТОП поисковых систем
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Комплексное SEO продвижение с гарантией результата. Увеличим органический трафик и привлечем целевых клиентов из Яндекс и Google.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button 
-                size="lg"
-                className="bg-yellow-400 text-primary hover:bg-yellow-300 font-bold px-8 shadow-lg"
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-white px-8"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                ОФОРМИТЬ ЗАЯВЛЕНИЕ
+                Получить консультацию
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-gray-300 hover:bg-gray-50"
+              >
+                Смотреть кейсы
               </Button>
             </div>
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-white/10 rounded-full blur-2xl" />
-                <div className="relative bg-white rounded-full p-4 shadow-2xl">
-                  <Badge className="bg-yellow-400 text-primary font-bold border-0 text-sm px-4 py-2">
-                    Онлайн<br />формат
-                  </Badge>
+            <div className="flex flex-wrap gap-6">
+              <div className="flex items-center gap-2">
+                <Icon name="CheckCircle2" size={20} className="text-green-600" />
+                <span className="text-sm text-gray-700">Результат от 3 месяцев</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="CheckCircle2" size={20} className="text-green-600" />
+                <span className="text-sm text-gray-700">Работа по договору</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="CheckCircle2" size={20} className="text-green-600" />
+                <span className="text-sm text-gray-700">Прозрачная отчётность</span>
+              </div>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="bg-gradient-to-br from-primary/10 to-purple-100 rounded-3xl p-8 aspect-square flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-6xl font-bold text-primary mb-4">ТОП-10</div>
+                <p className="text-gray-700 text-lg">в поисковой выдаче<br />Яндекс и Google</p>
+              </div>
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <Icon name="TrendingUp" size={24} className="text-green-600" />
+                </div>
+                <div>
+                  <div className="font-bold text-2xl text-gray-900">+250%</div>
+                  <div className="text-sm text-gray-600">рост трафика</div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-400 rounded-full filter blur-3xl opacity-30" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400 rounded-full filter blur-3xl opacity-30" />
         </div>
       </div>
     </section>

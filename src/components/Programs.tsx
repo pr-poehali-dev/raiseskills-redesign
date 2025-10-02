@@ -1,94 +1,107 @@
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const Programs = () => {
-  const programs = [
+  const stats = [
     {
-      name: 'КУРС MIDDLE',
-      age: '9-12 ЛЕТ',
-      lessons: '8 МЕСЯЦЕВ',
-      description: 'Ребята будут использовать возможности программы Scratch, создавать игры и мультики, как блочно, так и текстово. Много лайфхаков.',
-      price: 'от 4 500 ₽ / месяц',
-      color: 'from-primary to-purple-600',
-      icon: '👦'
+      value: '150+',
+      label: 'Успешных проектов',
+      icon: 'Briefcase'
     },
     {
-      name: 'КУРС HIGH',
-      age: '10-12 ЛЕТ',
-      lessons: '12 МЕСЯЦЕВ',
-      description: 'Ребята будут основательно программировать на настоящем языке Python, создавать игры и практические проекты, научатся думать как разработчик.',
-      price: 'от 5 500 ₽ / месяц',
-      color: 'from-orange-500 to-red-500',
-      icon: '🧑'
+      value: '7 лет',
+      label: 'Опыт в SEO',
+      icon: 'Award'
     },
     {
-      name: 'КУРС SUPER',
-      age: '12-14 ЛЕТ',
-      lessons: '8 МЕСЯЦЕВ',
-      description: 'Ребята будут продолжать изучать Python для создания продвинутых игр и приложений, изучат ООП, библиотеки, создадут портфолио.',
-      price: 'от 6 500 ₽ / месяц',
-      color: 'from-green-500 to-emerald-600',
-      icon: '👨'
+      value: '95%',
+      label: 'Довольных клиентов',
+      icon: 'Users'
     },
     {
-      name: 'КУРС EXPERT',
-      age: '14-16 ЛЕТ',
-      lessons: '12 МЕСЯЦЕВ',
-      description: 'Ребята будут изучать профессиональные инструменты разработки, создавать веб-приложения, работать с базами данных и API.',
-      price: 'от 7 500 ₽ / месяц',
-      color: 'from-purple-600 to-pink-600',
-      icon: '👩'
+      value: '24/7',
+      label: 'Поддержка',
+      icon: 'Headphones'
+    }
+  ];
+
+  const cases = [
+    {
+      title: 'Интернет-магазин электроники',
+      result: '+320% трафика за 6 месяцев',
+      positions: 'ТОП-3 по 89 запросам',
+      color: 'from-blue-500 to-blue-600'
+    },
+    {
+      title: 'Медицинская клиника',
+      result: '+450% органических заявок',
+      positions: 'ТОП-5 по 124 запросам',
+      color: 'from-green-500 to-green-600'
+    },
+    {
+      title: 'Производство мебели',
+      result: '+280% целевого трафика',
+      positions: 'ТОП-10 по 156 запросам',
+      color: 'from-purple-500 to-purple-600'
     }
   ];
 
   return (
-    <section id="programs" className="py-16 px-4 bg-gradient-to-b from-white to-blue-50">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4">
-          ВЫБЕРИТЕ ПОДХОДЯЩУЮ
-        </h2>
-        <p className="text-center text-lg mb-12 text-muted-foreground">
-          ПРОГРАММУ ДЛЯ ВАШЕГО РЕБЁНКА
-        </p>
-        <div className="grid md:grid-cols-2 gap-6">
-          {programs.map((program, index) => (
-            <Card 
-              key={index}
-              className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className={`bg-gradient-to-r ${program.color} p-6 text-white`}>
-                <div className="flex gap-2 mb-4">
-                  <Badge className="bg-white/20 border-0 text-white text-xs">
-                    {program.age}
-                  </Badge>
-                  <Badge className="bg-white/20 border-0 text-white text-xs">
-                    {program.lessons}
-                  </Badge>
-                </div>
-                <h3 className="font-heading font-bold text-2xl mb-3">
-                  {program.name}
-                </h3>
-                <p className="text-white/90 text-sm leading-relaxed mb-4">
-                  {program.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-white text-primary font-bold border-0">
-                    {program.price}
-                  </Badge>
-                  <Button 
-                    size="sm"
-                    className="bg-white text-primary hover:bg-white/90"
-                  >
-                    Подробнее →
-                  </Button>
-                </div>
+    <section id="cases" className="py-20 px-4 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
+            Наши результаты
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Реальные кейсы продвижения сайтов наших клиентов
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-4 gap-6 mb-16">
+          {stats.map((stat, index) => (
+            <Card key={index} className="p-6 text-center border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name={stat.icon as any} size={24} className="text-primary" />
               </div>
-              <CardContent className="p-6 bg-white">
-                <div className="text-6xl mb-2">{program.icon}</div>
-              </CardContent>
+              <div className="font-bold text-3xl text-gray-900 mb-2">{stat.value}</div>
+              <div className="text-sm text-gray-600">{stat.label}</div>
             </Card>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {cases.map((caseItem, index) => (
+            <div 
+              key={index}
+              className="group relative overflow-hidden rounded-2xl"
+            >
+              <div className={`bg-gradient-to-br ${caseItem.color} p-8 h-full text-white`}>
+                <div className="mb-6">
+                  <Icon name="TrendingUp" size={40} className="opacity-80" />
+                </div>
+                <h3 className="font-heading font-bold text-xl mb-4">
+                  {caseItem.title}
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <Icon name="CheckCircle2" size={20} className="flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">{caseItem.result}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Icon name="CheckCircle2" size={20} className="flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">{caseItem.positions}</span>
+                  </div>
+                </div>
+                <Button 
+                  variant="secondary"
+                  className="mt-6 w-full bg-white/20 hover:bg-white/30 text-white border-0"
+                >
+                  Подробнее
+                </Button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
