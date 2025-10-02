@@ -1,75 +1,54 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import Icon from '@/components/ui/icon';
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-20 px-4 relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,102,255,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] -z-10" />
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in-up">
-            <Badge className="mb-4 bg-gradient-to-r from-primary to-secondary text-white border-0 px-4 py-2">
-              Частный SEO специалист
-            </Badge>
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
-              Санал Эрдни-Горяев помогу создать и продвинуть сайт{' '}
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                вашей компании
-              </span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-4 leading-relaxed">
-              Занимаюсь SEO продвижением сайтов в поисковых системах Яндекс и Google с 2012 года
-            </p>
-            <p className="text-lg mb-8 font-medium">
-              Получите бесплатную консультацию, увеличьте продажи и трафик на Вашем сайте
-            </p>
-            <div className="flex flex-wrap gap-4">
+    <section className="bg-gradient-to-b from-blue-50 to-white py-12 px-4">
+      <div className="container mx-auto max-w-5xl">
+        <div className="bg-gradient-to-r from-primary via-purple-600 to-purple-500 rounded-3xl p-12 relative overflow-hidden shadow-2xl">
+          <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div className="text-white">
+              <Badge className="mb-4 bg-white/20 border-0 text-white">
+                ДЛЯ БИЗНЕСА
+              </Badge>
+              <h1 className="font-heading font-bold text-4xl md:text-5xl mb-6 leading-tight">
+                SEO ПРОДВИЖЕНИЕ<br />ДЛЯ ВАШЕГО БИЗНЕСА
+              </h1>
+              <div className="space-y-3 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-primary text-xs font-bold">+</span>
+                  </div>
+                  <p className="text-white/95">Научим вашего ребенка программированию с нуля</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-primary text-xs font-bold">+</span>
+                  </div>
+                  <p className="text-white/95">Каждое занятие проходит в группах с опытным педагогом</p>
+                </div>
+              </div>
               <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-secondary hover:shadow-xl transition-all hover:scale-105 text-lg px-8"
+                size="lg"
+                className="bg-yellow-400 text-primary hover:bg-yellow-300 font-bold px-8 shadow-lg"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Icon name="MessageCircle" className="mr-2" size={20} />
-                Бесплатная консультация
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-2 hover:bg-accent/10 transition-all hover:scale-105 text-lg px-8"
-                onClick={() => document.getElementById('case')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Смотреть кейсы
+                ОФОРМИТЬ ЗАЯВЛЕНИЕ
               </Button>
             </div>
-          </div>
-          <div className="relative animate-scale-in">
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-3xl opacity-20 animate-float" />
-            <Card className="relative bg-white/80 backdrop-blur-sm border-2 overflow-hidden">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                    <Icon name="TrendingUp" size={32} className="text-white" />
-                  </div>
-                  <div>
-                    <div className="font-heading font-bold text-3xl">+300%</div>
-                    <div className="text-sm text-muted-foreground">Средний рост трафика</div>
-                  </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-white/10 rounded-full blur-2xl" />
+                <div className="relative bg-white rounded-full p-4 shadow-2xl">
+                  <Badge className="bg-yellow-400 text-primary font-bold border-0 text-sm px-4 py-2">
+                    Онлайн<br />формат
+                  </Badge>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-primary/10 to-primary/20 border border-primary/20">
-                    <div className="font-heading font-bold text-2xl mb-1">150+</div>
-                    <div className="text-sm">Успешных проектов</div>
-                  </div>
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-secondary/10 to-accent/20 border border-secondary/20">
-                    <div className="font-heading font-bold text-2xl mb-1">13+</div>
-                    <div className="text-sm">Лет опыта</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-400 rounded-full filter blur-3xl opacity-30" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400 rounded-full filter blur-3xl opacity-30" />
         </div>
       </div>
     </section>

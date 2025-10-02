@@ -1,22 +1,22 @@
-import { Button } from '@/components/ui/button';
+import Icon from '@/components/ui/icon';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-lg z-50 border-b shadow-sm">
-      <nav className="container mx-auto px-4 py-5 flex items-center justify-between">
-        <div className="font-heading font-bold text-2xl bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-          RAISESKILLS
+    <header className="bg-white py-4 px-4">
+      <nav className="container mx-auto max-w-5xl flex items-center justify-between">
+        <div className="font-heading font-bold text-3xl text-primary">
+          ШК
         </div>
-        <div className="hidden md:flex gap-8 font-medium">
-          <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
-          <a href="#about" className="hover:text-primary transition-colors">О специалисте</a>
-          <a href="#case" className="hover:text-primary transition-colors">Кейсы</a>
-          <a href="#blog" className="hover:text-primary transition-colors">Блог</a>
-          <a href="#contact" className="hover:text-primary transition-colors">Контакты</a>
+        <div className="hidden md:flex gap-8 text-sm">
+          <a href="#courses" className="hover:text-primary transition-colors">Курсы</a>
+          <a href="#benefits" className="hover:text-primary transition-colors">Как проходит обучение</a>
+          <a href="#programs" className="hover:text-primary transition-colors">Просмотр детям</a>
+          <a href="#contact" className="hover:text-primary transition-colors">Частые вопросы</a>
         </div>
-        <Button className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all">
-          Консультация
-        </Button>
+        <div className="flex items-center gap-2 text-sm font-medium">
+          <Icon name="Phone" size={16} className="text-primary" />
+          +7 950 425-69-08
+        </div>
       </nav>
     </header>
   );
