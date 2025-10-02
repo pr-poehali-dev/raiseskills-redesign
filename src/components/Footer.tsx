@@ -1,69 +1,124 @@
 import Icon from '@/components/ui/icon';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-white py-12 px-4 border-t border-gray-200">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+    <footer className="bg-gradient-to-b from-gray-50 to-gray-100 border-t border-gray-200">
+      <div className="container mx-auto max-w-7xl px-4 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">RS</span>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-11 h-11 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-md">
+                <span className="text-white font-bold text-xl">R</span>
               </div>
-              <span className="font-bold text-xl">raiseskills</span>
+              <div>
+                <span className="font-bold text-xl text-gray-900">RaiseSkills</span>
+                <p className="text-xs text-gray-500">SEO агентство</p>
+              </div>
             </div>
-            <p className="text-sm text-gray-600 mb-4">
-              Профессиональное SEO продвижение сайтов в Москве с 2012 года
+            <p className="text-sm text-gray-600 leading-relaxed mb-4">
+              Профессиональное SEO продвижение сайтов в Москве. Помогаем бизнесу расти в поисковых системах с 2016 года.
             </p>
-            <p className="text-xs text-gray-500">
-              Помогаем бизнесу расти в поисковых системах Яндекс и Google
-            </p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Услуги</h4>
-            <div className="space-y-2 text-sm text-gray-600">
-              <p className="hover:text-primary transition-colors cursor-pointer">SEO продвижение</p>
-              <p className="hover:text-primary transition-colors cursor-pointer">Техническая оптимизация</p>
-              <p className="hover:text-primary transition-colors cursor-pointer">SEO аудит сайта</p>
-              <p className="hover:text-primary transition-colors cursor-pointer">Контент-маркетинг</p>
-            </div>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Контакты</h4>
-            <div className="space-y-3 text-sm text-gray-600 mb-6">
-              <div className="flex items-center gap-2">
-                <Icon name="MapPin" size={16} className="text-primary" />
-                <p>Москва, Россия</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Icon name="Mail" size={16} className="text-primary" />
-                <a href="mailto:info@raiseskills.ru" className="hover:text-primary transition-colors">info@raiseskills.ru</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Icon name="Phone" size={16} className="text-primary" />
-                <a href="tel:+79504256908" className="hover:text-primary transition-colors">+7 950 425-69-08</a>
-              </div>
-            </div>
-            <div className="flex gap-3">
+            <div className="flex gap-2">
               <a 
                 href="https://twitter.com/raiseskills" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-primary hover:text-white flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-lg bg-white border border-gray-300 hover:bg-blue-600 hover:border-blue-600 hover:text-white flex items-center justify-center transition-all shadow-sm"
               >
-                <Icon name="Twitter" size={18} />
+                <Icon name="Twitter" size={16} />
               </a>
               <a 
                 href="mailto:info@raiseskills.ru" 
-                className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-primary hover:text-white flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-lg bg-white border border-gray-300 hover:bg-blue-600 hover:border-blue-600 hover:text-white flex items-center justify-center transition-all shadow-sm"
               >
-                <Icon name="Mail" size={18} />
+                <Icon name="Mail" size={16} />
+              </a>
+              <a 
+                href="tel:+79504256908" 
+                className="w-9 h-9 rounded-lg bg-white border border-gray-300 hover:bg-blue-600 hover:border-blue-600 hover:text-white flex items-center justify-center transition-all shadow-sm"
+              >
+                <Icon name="Phone" size={16} />
               </a>
             </div>
           </div>
+
+          <div>
+            <h4 className="font-bold text-gray-900 mb-4">Услуги</h4>
+            <div className="space-y-2 text-sm">
+              <a href="#services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Технический аудит
+              </a>
+              <a href="#services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                SEO продвижение
+              </a>
+              <a href="#services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Контент-маркетинг
+              </a>
+              <a href="#services" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Аналитика и отчёты
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-gray-900 mb-4">Компания</h4>
+            <div className="space-y-2 text-sm">
+              <a href="#about" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                О нас
+              </a>
+              <a href="#cases" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Кейсы
+              </a>
+              <a href="#packages" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Тарифы
+              </a>
+              <a href="#contact" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                Контакты
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-bold text-gray-900 mb-4">Контакты</h4>
+            <div className="space-y-3 text-sm">
+              <a 
+                href="tel:+79504256908"
+                className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
+              >
+                <Icon name="Phone" size={16} className="flex-shrink-0" />
+                <span>+7 950 425-69-08</span>
+              </a>
+              <a 
+                href="mailto:info@raiseskills.ru"
+                className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
+              >
+                <Icon name="Mail" size={16} className="flex-shrink-0" />
+                <span>info@raiseskills.ru</span>
+              </a>
+              <div className="flex items-center gap-2 text-gray-600">
+                <Icon name="MapPin" size={16} className="flex-shrink-0" />
+                <span>Москва, Россия</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="border-t border-gray-200 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; 2024 raiseskills.ru — SEO продвижение сайтов. Все права защищены.</p>
+
+        <div className="border-t border-gray-300 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-600 text-center md:text-left">
+              © {currentYear} RaiseSkills. Все права защищены.
+            </p>
+            <div className="flex gap-6 text-xs text-gray-500">
+              <a href="#" className="hover:text-blue-600 transition-colors">
+                Политика конфиденциальности
+              </a>
+              <a href="#" className="hover:text-blue-600 transition-colors">
+                Пользовательское соглашение
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

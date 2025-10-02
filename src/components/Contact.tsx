@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import Icon from '@/components/ui/icon';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    site: ''
+    site: '',
+    message: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -15,101 +18,181 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-white to-blue-50">
-      <div className="container mx-auto max-w-6xl">
-        <div className="bg-gradient-to-r from-primary via-purple-600 to-purple-500 rounded-3xl p-12 shadow-2xl relative overflow-hidden">
-          <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center text-white">
-            <div>
-              <h2 className="font-heading font-bold text-4xl md:text-5xl mb-6">
-                ЗАКАЖИТЕ БЕСПЛАТНЫЙ АУДИТ САЙТА
-              </h2>
-              <p className="text-white/95 text-lg mb-6 leading-relaxed">
-                Оставьте заявку, и мы проведём экспресс-анализ вашего сайта, выявим основные проблемы и предложим решения для роста в поисковой выдаче.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
-                    <span className="text-primary text-sm font-bold">✓</span>
-                  </div>
-                  <span className="text-white/95">Анализ позиций сайта</span>
+    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <Icon name="Mail" size={16} />
+            Связаться с нами
+          </div>
+          <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-4 text-gray-900">
+            Получите бесплатный SEO-аудит
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Оставьте заявку прямо сейчас и получите подробный анализ вашего сайта с рекомендациями по продвижению
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-10 text-white">
+            <h3 className="font-bold text-3xl mb-6">
+              Что вы получите в аудите?
+            </h3>
+            <div className="space-y-6 mb-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="Search" size={24} />
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
-                    <span className="text-primary text-sm font-bold">✓</span>
-                  </div>
-                  <span className="text-white/95">Выявление технических ошибок</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
-                    <span className="text-primary text-sm font-bold">✓</span>
-                  </div>
-                  <span className="text-white/95">Рекомендации по продвижению</span>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Анализ позиций</h4>
+                  <p className="text-white/90">
+                    Проверим текущие позиции вашего сайта по ключевым запросам в Яндекс и Google
+                  </p>
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-4xl">📞</div>
-                  <div>
-                    <div className="text-sm text-white/80">Телефон</div>
-                    <a href="tel:+79504256908" className="text-xl font-bold hover:text-yellow-400 transition-colors">
-                      +7 950 425-69-08
-                    </a>
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="AlertTriangle" size={24} />
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="text-4xl">✉️</div>
-                  <div>
-                    <div className="text-sm text-white/80">Email</div>
-                    <a href="mailto:info@raiseskills.ru" className="text-xl font-bold hover:text-yellow-400 transition-colors">
-                      info@raiseskills.ru
-                    </a>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Технические ошибки</h4>
+                  <p className="text-white/90">
+                    Выявим проблемы, которые мешают индексации и продвижению сайта
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="Target" size={24} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">Анализ конкурентов</h4>
+                  <p className="text-white/90">
+                    Изучим стратегии конкурентов и найдём возможности для обгона
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="TrendingUp" size={24} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">План продвижения</h4>
+                  <p className="text-white/90">
+                    Составим пошаговый план работ с прогнозом результатов
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="font-heading font-bold text-2xl text-gray-900 mb-6">
-                Получить бесплатный аудит
-              </h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="border-t border-white/20 pt-8">
+              <h4 className="font-semibold text-lg mb-4">Свяжитесь с нами напрямую:</h4>
+              <div className="space-y-4">
+                <a 
+                  href="tel:+79504256908"
+                  className="flex items-center gap-3 hover:bg-white/10 p-3 rounded-lg transition-colors"
+                >
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <Icon name="Phone" size={20} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-white/80">Телефон</div>
+                    <div className="font-semibold">+7 950 425-69-08</div>
+                  </div>
+                </a>
+                <a 
+                  href="mailto:info@raiseskills.ru"
+                  className="flex items-center gap-3 hover:bg-white/10 p-3 rounded-lg transition-colors"
+                >
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <Icon name="Mail" size={20} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-white/80">Email</div>
+                    <div className="font-semibold">info@raiseskills.ru</div>
+                  </div>
+                </a>
+                <div className="flex items-center gap-3 p-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                    <Icon name="MapPin" size={20} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-white/80">Адрес</div>
+                    <div className="font-semibold">Москва, Россия</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Ваше имя *
+                </label>
                 <Input
-                  placeholder="Ваше имя"
+                  placeholder="Иван Иванов"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="h-12 border-gray-200"
+                  className="h-12"
                   required
                 />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Телефон *
+                </label>
                 <Input
-                  placeholder="Номер телефона"
+                  placeholder="+7 (___) ___-__-__"
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  className="h-12 border-gray-200"
+                  className="h-12"
                   required
                 />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Адрес сайта *
+                </label>
                 <Input
-                  placeholder="Адрес вашего сайта"
+                  placeholder="https://example.com"
                   type="url"
                   value={formData.site}
                   onChange={(e) => setFormData({...formData, site: e.target.value})}
-                  className="h-12 border-gray-200"
+                  className="h-12"
                   required
                 />
-                <Button 
-                  type="submit"
-                  className="w-full h-12 bg-yellow-400 text-primary hover:bg-yellow-300 font-bold text-lg shadow-lg"
-                >
-                  ПОЛУЧИТЬ АУДИТ
-                </Button>
-                <p className="text-xs text-gray-500 text-center">
-                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-                </p>
-              </form>
-            </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Комментарий (необязательно)
+                </label>
+                <Textarea
+                  placeholder="Расскажите о ваших целях и задачах..."
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  className="min-h-[100px]"
+                />
+              </div>
+
+              <Button 
+                type="submit"
+                className="w-full h-14 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg shadow-lg"
+              >
+                Получить бесплатный аудит
+                <Icon name="ArrowRight" size={20} className="ml-2" />
+              </Button>
+
+              <p className="text-xs text-gray-500 text-center leading-relaxed">
+                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и обработкой персональных данных
+              </p>
+            </form>
           </div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl opacity-20" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl opacity-20" />
         </div>
       </div>
     </section>
