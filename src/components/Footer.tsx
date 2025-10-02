@@ -2,11 +2,11 @@ import Icon from '@/components/ui/icon';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A1F2C] text-white py-12 px-4">
+    <footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-12 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="font-heading font-bold text-2xl mb-4 bg-gradient-to-r from-[#FF8B6B] via-[#4ECDIC4] to-[#FFE66D] bg-clip-text text-transparent">
+            <div className="font-heading font-bold text-2xl mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               RAISESKILLS
             </div>
             <p className="text-white/70 mb-4">

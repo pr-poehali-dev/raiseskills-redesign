@@ -19,7 +19,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white">
+    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-white to-slate-50">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
@@ -77,7 +77,7 @@ const Contact = () => {
               <Button 
                 type="submit" 
                 size="lg" 
-                className="w-full bg-gradient-to-r from-[#FF8B6B] to-[#FEC6A1] hover:opacity-90 transition-all hover:scale-105 text-lg h-14"
+                className="w-full bg-gradient-to-r from-primary to-secondary hover:shadow-xl transition-all hover:scale-105 text-lg h-14"
               >
                 <Icon name="Send" className="mr-2" size={20} />
                 Отправить заявку

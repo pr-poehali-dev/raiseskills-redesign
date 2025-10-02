@@ -73,11 +73,11 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			backgroundImage: {
-				'gradient-coral': 'linear-gradient(135deg, #FF8B6B 0%, #FEC6A1 100%)',
-				'gradient-cyan': 'linear-gradient(135deg, #4ECDIC4 0%, #0EA5E9 100%)',
-				'gradient-yellow': 'linear-gradient(135deg, #FFE66D 0%, #FEF7CD 100%)',
-				'gradient-primary': 'linear-gradient(135deg, #FF8B6B 0%, #4ECDIC4 50%, #FFE66D 100%)',
-				'gradient-navy': 'linear-gradient(135deg, #1A1F2C 0%, #2563eb 100%)'
+				'gradient-blue': 'linear-gradient(135deg, #0066FF 0%, #00BFFF 100%)',
+				'gradient-purple': 'linear-gradient(135deg, #9333EA 0%, #C084FC 100%)',
+				'gradient-primary': 'linear-gradient(135deg, #0066FF 0%, #9333EA 50%, #C084FC 100%)',
+				'gradient-dark': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+				'gradient-light': 'linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%)'
 			},
 			keyframes: {
 				'accordion-down': {

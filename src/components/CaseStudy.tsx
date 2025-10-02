@@ -16,10 +16,10 @@ const CaseStudy = () => {
   };
 
   return (
-    <section id="case" className="py-20 px-4 bg-gradient-to-br from-[#1A1F2C] to-[#2563eb] text-white relative overflow-hidden">
+    <section id="case" className="py-20 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#FF8B6B] rounded-full filter blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#4ECDIC4] rounded-full filter blur-3xl" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full filter blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full filter blur-3xl" />
       </div>
       <div className="container mx-auto max-w-6xl relative">
         <div className="text-center mb-12 animate-fade-in">
@@ -40,7 +40,7 @@ const CaseStudy = () => {
               className="bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               <CardContent className="p-8 text-center">
-                <div className="font-heading font-bold text-5xl mb-2 bg-gradient-to-r from-[#FFE66D] to-[#FEF7CD] bg-clip-text text-transparent">
+                <div className="font-heading font-bold text-5xl mb-2 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                   {result.value}
                 </div>
                 <p className="text-white/80">{result.label}</p>
@@ -58,15 +58,15 @@ const CaseStudy = () => {
                 <h4 className="font-heading font-bold text-lg mb-3">Ключевые составляющие успеха:</h4>
                 <ul className="space-y-2 text-white/80">
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle2" size={20} className="text-[#FFE66D] flex-shrink-0 mt-0.5" />
+                    <Icon name="CheckCircle2" size={20} className="text-blue-300 flex-shrink-0 mt-0.5" />
                     <span>Хорошо проработанная структура сайта</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle2" size={20} className="text-[#FFE66D] flex-shrink-0 mt-0.5" />
+                    <Icon name="CheckCircle2" size={20} className="text-blue-300 flex-shrink-0 mt-0.5" />
                     <span>Полный охват всех ключевых слов из тематики</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="CheckCircle2" size={20} className="text-[#FFE66D] flex-shrink-0 mt-0.5" />
+                    <Icon name="CheckCircle2" size={20} className="text-blue-300 flex-shrink-0 mt-0.5" />
                     <span>Продуманная работа над контентом сайта</span>
                   </li>
                 </ul>
@@ -75,15 +75,15 @@ const CaseStudy = () => {
                 <h4 className="font-heading font-bold text-lg mb-3">Выполненные работы:</h4>
                 <ul className="space-y-2 text-white/80">
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" size={20} className="text-[#4ECDIC4] flex-shrink-0 mt-0.5" />
+                    <Icon name="Check" size={20} className="text-purple-300 flex-shrink-0 mt-0.5" />
                     <span>Комплексный аудит сайта</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" size={20} className="text-[#4ECDIC4] flex-shrink-0 mt-0.5" />
+                    <Icon name="Check" size={20} className="text-purple-300 flex-shrink-0 mt-0.5" />
                     <span>Анализ структур конкурентов</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Icon name="Check" size={20} className="text-[#4ECDIC4] flex-shrink-0 mt-0.5" />
+                    <Icon name="Check" size={20} className="text-purple-300 flex-shrink-0 mt-0.5" />
                     <span>Создание уникальной структуры</span>
                   </li>
                 </ul>

@@ -38,25 +38,25 @@ const About = () => {
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#FF8B6B] to-[#FEC6A1] flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0 mt-1">
                   <Icon name="Check" size={14} className="text-white" />
                 </div>
                 <p className="text-lg">Опыт работы штатным SEO специалистом (инхаус практика)</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#FF8B6B] to-[#FEC6A1] flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0 mt-1">
                   <Icon name="Check" size={14} className="text-white" />
                 </div>
                 <p className="text-lg">Автор SEO блога raiseskills.ru с полезными материалами</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#FF8B6B] to-[#FEC6A1] flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0 mt-1">
                   <Icon name="Check" size={14} className="text-white" />
                 </div>
                 <p className="text-lg">Все методики основаны на реальной практике и опыте</p>
               </div>
             </div>
-            <div className="p-6 bg-gradient-to-br from-[#FFE66D]/20 to-[#FEF7CD]/20 rounded-2xl border-2 border-[#FFE66D]/30">
+            <div className="p-6 bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl border-2 border-accent/20">
               <p className="text-lg font-medium italic">
                 "SEO продвижение — это не волшебство, а конкретная продуманная работа. Комплексная работа по SEO дает долгосрочный результат в виде трафика и продаж"
               </p>
@@ -69,7 +69,7 @@ const About = () => {
                 className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2"
               >
                 <CardContent className="p-6 text-center">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#4ECDIC4] to-[#0EA5E9] flex items-center justify-center mx-auto mb-4">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center mx-auto mb-4 shadow-lg">
                     <Icon name={benefit.icon as any} size={28} className="text-white" />
                   </div>
                   <h3 className="font-heading font-bold text-lg mb-2">{benefit.title}</h3>

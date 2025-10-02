@@ -22,7 +22,7 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+    <section id="blog" className="py-20 px-4 bg-gradient-to-b from-white to-slate-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">

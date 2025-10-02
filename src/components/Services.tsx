@@ -35,7 +35,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+    <section id="services" className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-heading font-bold text-4xl md:text-5xl mb-4">
@@ -49,12 +49,12 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/50 overflow-hidden relative"
+              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-primary/30 overflow-hidden relative bg-white"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#FF8B6B]/5 via-[#4ECDIC4]/5 to-[#FFE66D]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
               <CardContent className="p-8 relative">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FF8B6B] to-[#FEC6A1] flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                     <Icon name={service.icon as any} size={28} className="text-white" />
                   </div>
                   <Badge variant="secondary" className="text-sm font-bold">
